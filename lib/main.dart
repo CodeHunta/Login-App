@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter_test/flutter_test.dart';
 
 void main() => runApp(MyApp());
 
@@ -121,7 +118,8 @@ class MyApp extends StatelessWidget {
                           ),
                         ),
                         FloatingActionButton(
-                          onPressed: () => launch('mailto:stanleyumez@outlook.com?subject=Technical%20Support&body=I%20forgot%20my%20password!'),
+                          onPressed: () => launch(
+                              'mailto:stanleyumez@outlook.com?subject=Technical%20Support&body=I%20forgot%20my%20password!'),
                           backgroundColor: Colors.purple[700],
                           child: Icon(Icons.arrow_forward,
                               color: Colors.amber, size: 30),
@@ -156,7 +154,8 @@ class MyApp extends StatelessWidget {
                       height: 50,
                       child: RaisedButton(
                         color: Colors.blue[600],
-                        onPressed: () => launch('https://twitter.com/CodeHunta'),
+                        onPressed: () =>
+                            launch('https://twitter.com/CodeHunta'),
                         child: Padding(
                           padding: const EdgeInsets.all(15.0),
                           child: Text('Twitter',
